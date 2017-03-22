@@ -1,0 +1,13 @@
+Coeziunea si Cuplajul nu sunt solutii pur tehnice. Sunt principii bine de respectat cand modelam proiectul nostru.
+Ambele se reflecta in diagrama de clase.
+
+Coeziunea -> Cat de specifica e o anumita clasa. Cat de bine isi face treaba.
+          -> e bine sa avem coeziune cat mai mare
+Cuplajul este bine sa fie mic.
+
+Cele doua principii sunt legate. Daca coeziunea e mare, e greu sa ai cuplajul mare.
+
+Fiecare clasa face ceva anume. E putin probabil ca ce face sa fie relevant pt multe clase.
+Cuplajul va fi redus. Ea va fi legata de cel mult una-doua clase.
+
+Sa avem putine clase care au multe relatii cu celelalte clase.
