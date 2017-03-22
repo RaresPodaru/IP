@@ -4,7 +4,25 @@ public class BazaDate {
 
   protected ArrayList<Actori> actori = new ArrayList<>();
   protected ArrayList<Piesa> myPiesaTeatru = new ArrayList<>();
+  protected ArrayList<Client> clients = new ArrayList<>();
   protected Administrator administrator;
+
+  protected BazaDate() {};
+
+  public BazaDate(ArrayList<Actori> actori, ArrayList<Piesa> myPiesaTeatru, ArrayList<Client> clients, Administrator administrator) {
+    this.actori = actori;
+    this.myPiesaTeatru = myPiesaTeatru;
+    this.clients = clients;
+    this.administrator = administrator;
+  }
+
+  public ArrayList<Client> getClients() {
+      return clients;
+  }
+
+  public void setClients(ArrayList<Client> clients) {
+    this.clients = clients;
+  }
 
   public ArrayList<Piesa> getMyPiesaTeatru() {
     return myPiesaTeatru;

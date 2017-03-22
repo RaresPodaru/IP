@@ -9,6 +9,7 @@ public class Bilet {
       this.validat = validat;
     }
 
+
     public Piesa getPiesa() {
         return piesa;
     }

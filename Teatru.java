@@ -10,6 +10,10 @@ public class Teatru extends BazaDate{
       private static final Teatru INSTANCE = new Teatru();
     }
 
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
     public static Teatru getInstance() {
       return TeatruHolder.INSTANCE;
     }
@@ -23,9 +27,6 @@ public class Teatru extends BazaDate{
         super.toString();
     }
 
-    public void modifica() {
-
-    }
 
     @Override
     public String toString() {

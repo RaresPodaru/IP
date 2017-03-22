@@ -1,9 +1,11 @@
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 
 public class Client {
     private String usernume;
     private String parola;
     private ArrayList<Cont> contBancar = new ArrayList<>();
+    private ArrayList<Bilet> bilete = new ArrayList<>();
     private boolean logged = false;
 
     public Client(String usernume, String parola, ArrayList<Cont> contBancar) {
@@ -12,7 +14,9 @@ public class Client {
         this.contBancar = contBancar;
     }
 
-
+    public void addBilet(Bilet bilet) {
+        bilete.add(bilet);
+    }
     public void login() {
         this.logged = true;
     }
