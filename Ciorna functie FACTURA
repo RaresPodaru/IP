@@ -1,0 +1,11 @@
+int factura(Bilete[] cos){
+
+   int suma=0;
+   int i;
+   for(i=0; i< cos.size(); i++){
+
+      suma += Bilete[i].getPret();
+   }
+   
+   return suma;
+}
