@@ -27,6 +27,13 @@ public class Teatru extends BazaDate{
         super.toString();
     }
 
+    public int cautareSpectacol(String nume) {
+        for(int i = 0; i < this.myPiesaTeatru.size(); i++) {
+            if(this.myPiesaTeatru.get(i).getTitlu().equals(nume) == true)
+                return i;
+        }
+        return -1;
+    }
 
     @Override
     public String toString() {
