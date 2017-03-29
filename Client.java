@@ -14,18 +14,29 @@ public class Client {
         this.contBancar = contBancar;
     }
 
+    public Client(String nume, ArrayList<Bilet> bilete) {
+        this.usernume = nume;
+        this.bilete = bilete;
+    }
+
     public void addBilet(Bilet bilet) {
         bilete.add(bilet);
     }
-    public void login() {
-        this.logged = true;
+    public boolean checkLogin(String username, String password) {
+        if( username.matches("[A-Z]") == false && username.matches("[a-z]") == false)
+            return false;
+        if(password.length() < 7)
+            return false;
+
+        if(password.matches(".*\\d.*") == false)
+            return false;
+
+        return true;
     }
 
     public void logout() {
         this.logged = false;
     }
-
-
 
     public String getUsernume() {
       return usernume;
@@ -51,6 +62,13 @@ public class Client {
       this.contBancar = contBancar;
     }
 
+    public int getFactura() {
+        int suma = 0;
+        for(int i = 0; i < this.bilete.size(); i++) {
+            suma += this.bilete.get(i).getPret();
+        }
+        return suma;
+    }
   @Override
   public String toString() {
     return "Client{" +
